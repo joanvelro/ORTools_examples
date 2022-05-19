@@ -167,6 +167,7 @@ def build_model(jobs_data):
 
 def solve_model(model):
     solver = cp_model.CpSolver()
+    solver.parameters.random_seed = 30
     status = solver.Solve(model)
 
     if status == cp_model.OPTIMAL:
