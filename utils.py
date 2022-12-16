@@ -1,5 +1,11 @@
 import os
 import shutil
+import json
+
+
+def write_json(filename: str, dictionary: dict):
+    with open(filename, 'w') as f:
+        json.dump(dictionary, f, indent=4)
 
 
 def check_environment():
